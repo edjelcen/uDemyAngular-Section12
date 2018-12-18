@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-md-8">
+    <!-- <app-recipe-item [recipe]="recipeItem"  *ngFor="let recipeItem of recipes"></app-recipe-item> -->
+    <app-recipe-item [routerLink]="['/recipes', recipeItem.id]" [recipe]=recipeItem  *ngFor="let recipeItem of recipes"></app-recipe-item>
+  </div>
+  <div class="col-md-7">
+    <app-recipe-home></app-recipe-home>
+  </div> 
+  <!-- <div class="col-md-7">
+    <router-outlet></router-outlet>
+  </div> -->
+</div>

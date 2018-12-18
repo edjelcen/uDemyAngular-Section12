@@ -1,0 +1,58 @@
+<div class="container">
+  <div *ngIf="showRecipe">
+      <!-- <div app-recipe-header (featureSelected)="onNavigate($event)"></div> -->
+      <div app-recipe-header></div>
+        <div class="row" >
+          <div class="col-md-12">
+            <app-recipe></app-recipe>
+            <!-- <app-recipe *ngIf="loadedFeature === 'recipe'" ></app-recipe>
+            <app-shopping-list  *ngIf="loadedFeature !== 'recipe'"></app-shopping-list> -->
+          </div>
+        </div>
+    </div>
+  <app-directive-sample *ngIf="showDirectives"></app-directive-sample>
+  <app-accounts *ngIf="showAccounts"></app-accounts>
+  <app-active-inactive *ngIf="showAssignment05"></app-active-inactive>
+  <app-server-admin *ngIf="showServerAdmin"></app-server-admin>
+</div>
+
+<div class="container">
+  <h3> This is for Venu menu</h3>
+  <div>
+    <ul class="nav nav-tabs pull-right">
+      <li class="active">
+        <a href="/">Home</a>
+      </li>
+      <li class="active dropdown-accordion" data-accordion="#accordionmasterData" (click)="onClickMenuParent($event)">
+        <a data-toggle="dropdown" href="/recipes"  (click)="onClickMenuParent($event)">Recipes<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li class="dropdown ">
+            <a href="/recipes/About">About</a>
+          </li>
+          <li>
+            <div class="panel-group" id="accordionmasterData">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordionmasterData" href="#collapseOne_1">
+                                @item.DisplayText <i class="fa fa-caret-right"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne_1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="simple">
+                              <li><a href="recipes/Adobo">Adobo</a></li>
+                              <li><a href="reciples/Steak">Steak</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</div>

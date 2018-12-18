@@ -1,0 +1,6 @@
+.selected {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.3em;
+}
